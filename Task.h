@@ -15,23 +15,25 @@ using namespace std;
     public:
     //Constructors
     Task();
-    Task(string taskName, string taskDesc);
+    Task(const string& taskName, const string& taskDesc);
 
     //Deconstructor
     ~Task();
 
     //Getters
-    int getTaskId();
-    string getTaskName();
-    string getTaskDesc();
-    bool getCompleteStatus();
+    int getTaskId() const;
+    int getNextTaskId() const;
+    string getTaskName() const;
+    string getTaskDesc() const;
+    bool getCompleteStatus() const;
 
     //Setters
     void setTaskId(int id);
-    void setTaskName(string name);
-    void setTaskDesc(string desc);
-    
-    void Task::markComplete();
+    void setTaskName(const string& name);
+    void setTaskDesc(const string& desc);
+    void setNextTaskId(int nextId);
+
+    void markComplete();
 
 
  };

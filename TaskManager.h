@@ -17,14 +17,17 @@ class TaskManager {
     ~TaskManager();
 
     //Managing Tasks
-    void addTask(Task& task);
+    void addTask(const Task& task);
     void removeTask(int taskId);
     void markComplete(int taskId);
 
     //Querying Tasks 
-    void displaytasks();
-    void showPendingTasks();
-    void showCompletedTasks();
+    void displayTasks() const;
+    void searchTasks(const string& keyword) const;
+    void showPendingTasks() const;
+    void showCompletedTasks() const;
+    void setTasks(const vector<Task>& loadedTasks);
+    const vector<Task>& getTasks() const;
 
 };
 #endif
